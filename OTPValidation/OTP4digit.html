@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>OTP</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        
+        <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous" />
+    </head>
+    <body>
+        
+        <div class="contanier w-50 mx-auto" style="background: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 69, 203, 1) 100%); height: 500px;">
+             <div class="container p-1">
+            <button onclick="generateOTP()" class="btn btn-light mx-auto d-block mt-5">Generate OTP</button>
+            </div>
+             <div id="showOTP" class="alert alert-success d-none bg-info mx-auto w-25 rounded-3 fw-bold text-center p-3 mt-2"></div>
+             <div class="contanier bg-dark w-50 p-2 mx-auto mt-5 rounded-3">
+                <div class="row mx-auto">
+                    <div class="col">
+                        <input type="text" class="form-control fs-5 text-center" maxlength="1" id="digit1"
+                            required oninput="goToNext(this, 'digit2')" />
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control fs-5 text-center" maxlength="1" id="digit2"
+                            required oninput="goToNext(this, 'digit3')"/>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control fs-5 text-center" maxlength="1" id="digit3"
+                            required oninput="goToNext(this, 'digit4')"/>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control fs-5 text-center" maxlength="1" id="digit4"
+                        required oninput="goToNext(this, 'sumbitBTN')"/>/>
+                    </div>
+                </div>
+                </div>
+                <button id="sumbitBTN" class="btn btn-light mx-auto d-block mt-3">Sumbit</button>
+                <div class="alert alert-success mt-3 d-none w-50 bg-success mx-auto text-white text-center" id="successMSG">OTP Sumitted Successfully!</div>
+                <div class="alert alert-white mt-3 d-none w-50 bg-warning mx-auto text-center" id="errorMSG">You have entered wrong OTP !</div>
+        </div>
+
+    <script>
+
+        function goToNext(self, next){
+            console.log(self, "self");
+            console.log(next);
+            if(self.value.length == 1){
+                document.getElementById(next).focus()
+            }
+        }
+
+
+        function generateOTP(){
+            generatedOTP = Math.floor((Math.random() + 1) * 1000)
+            console.log(generatedOTP, "otp")
+            document.querySelector("#showOTP").classList.remove("d-none");
+            document.querySelector("#showOTP").textContent = generatedOTP
+            
+        }
+
+        document.querySelector("#sumbitBTN").addEventListener("click",() =>{
+
+            userOTP = ''
+            userOTP = document.getElementById("digit1").value +
+                      document.getElementById("digit2").value +
+                      document.getElementById("digit3").value +
+                      document.getElementById("digit4").value
+
+        let iscorrect
+
+        if(generatedOTP == userOTP)
+            iscorrect = true
+
+            if(iscorrect){
+                document.getElementById("successMSG").classList.remove("d-none");
+            }else{
+                document.getElementById("errorMSG").classList.remove("d-none");
+            }    
+        });
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Bootstrap JavaScript Libraries -->
+       
+         <script  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"crossorigin="anonymous" ></script>
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    </body>
+</html>
