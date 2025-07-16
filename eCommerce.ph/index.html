@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport"content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"/>
+
+            <!-- icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- CSS -->
+         <link rel="stylesheet" href="./index.css"/>
+    </head>
+
+    <body>
+        <!-- header -->
+        <h1 class="text-center fs-1 fw-bold shadow-lg" style="background-color: rgb(255, 247, 247); height: 100px; color: rgb(253, 56, 82); text-shadow: 2px 2px rgb(55, 10, 10); ">Unqiue Blast <br>Fashions </h1>
+
+        <!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+  <div class="container-fluid">
+   <div class="container_logo px-5"><img src="./logo.jpg"></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="nav-link btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+  Add Products</button>
+          
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Category
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><button class="dropdown-item" onclick="filterByCategory('Men')">Men</button></li>
+              <li><button class="dropdown-item" onclick="filterByCategory('Women')">Women</button></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><button class="dropdown-item" onclick="filterByCategory('Kids')">Kids wear</button></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-filter"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><button class="dropdown-item" onclick="HighToLow()">High to low</button></li>
+              <li><button class="dropdown-item" onclick="LowToHigh()">Low to high</button></li>
+            </ul>
+          </li>
+ 
+      </ul>
+      <div class="d-flex ">
+        <div class="contanier">
+         <form class="d-flex" onsubmit="searchByName()">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="sName">
+            <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+          </div>
+        <button class="btn btn-outline-danger" type="submit"><i class="fa-solid fa-circle-user"></i></button>
+        <button class="btn btn-outline-danger  mx-2" type="submit"><i class="fa-solid fa-registered"></i></button>
+        <a class="btn btn-danger mx-3" href="./cart.html"><i class="fa-solid fa-cart-plus"></i><span class="badge" id="cartLength">0</span></a>
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Add Courousel  -->
+ <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./cor2.jpg" class="d-block w-100" style="height: 500px;" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./cor3.jpg" class="d-block w-100" style="height: 500px;" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./cor4.jpg" class="d-block w-100" style="height: 500px;" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<!-- products -->
+
+<h1 class="text-center fw-bold p-3" style="background-color: rgb(255, 247, 247); height: 100px; color: rgb(164, 250, 58); text-shadow: 2px 2px rgb(55, 10, 10); text-decoration:underline;">Products</h1>
+<div class="container">
+  <div class="row" id="addproducts"></div>
+</div>
+
+
+
+<!-- Modal -->
+ <!-- pname, pDescription,pImage,pCategory,pPrice , AddNewProduct() -->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add new Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body ">
+          <form>
+            <div class="mb-3">
+              <label for="pName" class="form-label">Product Name</label>
+              <input type="text" class="form-control" id="pName">
+            </div>
+            <div class="mb-3">
+              <label for="pDescription" class="form-label">Product Description</label>
+              <input type="text" class="form-control" id="pDescription">
+            </div>
+            <div class="mb-3">
+              <label for="pImage" class="form-label" placeholder="Add absolute path">Product Image </label>
+              <input type="text" class="form-control" id="pImage">
+            </div>
+            <div class="mb-3">
+              <label for="pCategory" class="form-label">Product Category</label>
+              <input type="text" class="form-control" id="pCategory">
+            </div>
+            <div class="mb-3">
+              <label for="pPrice" class="form-label">Product Price</label>
+              <input type="text" class="form-control" id="pPrice">
+            </div>
+          </form>
+        </div>
+       <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="AddNewProduct()">Add new Product</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+        <!-- Bootstrap JavaScript Libraries -->
+         <script src="./script.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

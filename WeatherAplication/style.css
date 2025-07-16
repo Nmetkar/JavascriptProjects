@@ -1,0 +1,21 @@
+body{
+    background-image: url(./weather.jpg);
+    background-size: cover;
+}
+
+
+.weathercon{
+    background: rgb(47, 163, 163);
+    opacity: 10px;
+    border-radius: 20px ;
+    height: 450px;
+    width: 380px;
+    margin-top: 80px;
+}
+
+.icon{
+    border: none;
+    height: 45px;
+    width: 45px;
+    border-radius: 30px;
+}

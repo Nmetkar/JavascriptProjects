@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>ARRAY</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+
+        <style>
+            .liClass{
+                color: darkblue;
+            }
+        </style>
+    </head>
+    <body>
+       <!-- Assigment 1 -->
+        <div class="contanier mt-3 w-75 mx-auto" style="background-color: rgb(211, 249, 136);">
+            <h1 class="text-center">Assigment 1</h1>
+            <div class="container m-3">
+                <input type="text" id="taskName" class="form-control-2"/>
+                <button type="button" class="btn btn-outline-primary" onclick="addNewTask()" >Add Task</button>
+                <button type="button" class="btn btn-primary" onclick="clearAllTasks()">Clear All</button>
+                <ul id="showTasks"></ul>
+            </div>
+        </div>
+
+    <hr>
+
+
+    <div class="contanier mt-2 p-3" style="background-color: rgb(113, 240, 240);">
+        <h1 class="text-center">Assigment 2</h1>
+        <div class="contanier w-50 mx-auto">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">1</th>
+                        <th scope="col">2</th>
+                        <th scope="col">3</th>
+                        <th scope="col">4</th>
+                        <th scope="col">5</th>
+                        <th scope="col">6</th>
+                        <th scope="col">7</th>
+                        <th scope="col">8</th>
+                        <th scope="col">9</th>
+                        <th scope="col">10</th>
+                    </tr>
+                 </thead>
+                 <tbody id="createRow"></tbody>
+            </table>
+        </div>
+    </div>
+
+
+<hr>
+
+<!-- Assigment 3 -->
+
+<div class="container mt-3 text-center pb-4" style="background-color: rgb(249, 144, 165);">
+    <h1>Students Marks Calculator</h1>
+    <div class="contanier pb-4 mt-4">
+        <input type="text" id="marksNum" class="form-control-2"/>
+        <button type="button" class="btn btn btn-success" onclick="addNewMarks()"> Add Marks</button>
+        <button type="button" class="btn btn btn-success" onclick="calculateNewMarks()"> Calculate Marks</button>
+        <button type="button" class="btn btn btn-success" onclick="resetNewMarks()"> Reset Marks</button>
+    </div>
+    <div class="contanier" style="background-color: bisque; height: 200px;"></div>
+    <ul id="showMarks" class="fw-bold"></ul>
+</div>
+
+<hr>
+
+<!-- Assigment 4 -->
+
+
+<div class="contanier mt-3 w-50 mx-auto" style="background-color: rgb(228, 190, 254);">
+    <h1>Search in an Array</h1>
+    <div class="contanier m-3 ">
+        <input type="text" class="form-control-2" id="searchName"/>
+        <button type="button" class="btn btn btn-info" onclick="searchhere()">Search</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="./scripts.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

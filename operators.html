@@ -1,0 +1,145 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // Assignment 1: Arithmetic Operations 
+
+            n1 = Number(prompt("Enter the first Number"))
+            n2 = Number(prompt("Enter the second Number"))
+            console.log('Addition n1+n2: ', n1+n2)
+            console.log('Subtraction n1-n2:', n1-n2)
+            console.log('Multipliction n1*n2: ', n1*n2)
+            console.log('divsion n1/n2:', n1/n2)
+            console.log('Modulus n1%n2:', n1%n2)
+
+
+
+           // Assignment 2: Comparison Operations 
+
+           console.log("first number greater than second?", n1>=n2)
+           console.log("Is first number less than second?", n1<n2)
+           console.log("'Are the two numbers equal?", n1==n2)
+
+
+
+          // Assignment 3: Logical Operators
+
+            Math = 90;
+            Science = 85;
+            if(Math>=90 && Science>=85){
+                console.log('Eligible')
+            }else{
+             console.log('Not')
+            }
+
+
+
+           // Assignment 4: Assignment Operators
+
+                x = 10;
+                console.log("Initial value of x is", x);
+                x += 5;
+                console.log("After Adding 5 =", x);
+                x *= 3;
+                console.log("After Multiplying 3 =", x);
+                x -= 10;
+                console.log("After Subtracting 1 =", x);
+                x /= 2;
+                console.log("After Dividing 2 =", x);
+                x %= 3;
+                console.log(" Modules with 3 =", x);
+
+
+
+            // Assignment 5: Operators Precedence
+
+             let result = (10 + 3) * 5;
+             console.log(result);
+
+             let value = 10 + 3;
+             console.log(value * 5);
+
+             const total = 20 / 2;
+             console.log(total + 3);
+
+             const a = 20 / 2 + 3;
+             console.log(a);
+
+
+
+            // Assignment 6: Combined Examples
+
+            length = 8;
+            width = 6;
+            console.log("Enter the length =", length)
+            console.log("Enter the width =", width)
+            perimeter = 2 * (length + width)
+            console.log(' perimeter:', perimeter)
+            Area = length * width
+            console.log(' Area:', Area)
+            console.log("Is perimeter is greater than area?", perimeter > Area ) 
+
+
+            // Assignment 7: Complex logical and comparison operators
+
+             age = Number(prompt("Enter the age of user"))
+             citizenship = (prompt("Is user Citizen? (true/false)"))
+             console.log("user age", age);
+             console.log("user citizenship", citizenship);
+             isEligible = (age >= 18 && citizenship === 'true')
+             console.log("isEligible", isEligible);
+            if(isEligible){
+                console.log('Eligible to vote:',isEligible)
+            }else{
+             console.log('Eligible to vote:', isEligible)
+            }
+
+            
+             // Assignment 9: BMI Calculator
+
+             let weight = parseFloat(prompt("Enter your weight in (kg): "));
+             let height = parseFloat(("Enter your height in (m): "));
+
+             let bmi = weight/ (height * height);
+             console.log("BMI :",bmi);
+
+             if(bmi < 18.5){
+                console.log("Category : Underweight");
+             }else if(bmi >= 18.5 && bmi < 24.9) {
+                console.log("Category : Normal Weight");
+             }else if(bmi >= 25 && bmi <29.9){
+                console.log("Category : Overweight");
+             }else{
+                console.log("Category : Obesity");
+             }
+
+
+
+             // Assignment 9: Even and ODD
+
+             num = (prompt("Enter a number"))
+             console.log("Enter a number:", num);
+             if(num%2 === 0){
+                console.log("The number is even", num);
+             }else{
+                console.log("The numbr is odd", num);
+             }
+
+
+
+              // Assignment 10: shopping discount
+
+              let totalAmount = parseFloat(prompt("Enter the number: "));
+               if(totalAmount > 100){
+                    totalAmount -= totalAmount * 0.1;
+               }
+               console.log("Discount total: ", totalAmount);
+        </script>
+    </body>
+    </html>

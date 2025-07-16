@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+         <title>bootstrap</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+        
+    <body>
+        <div class="contanier mx-auto " style= "background-color: rgb(167, 236, 213); height: 300px;" >
+        <h1>Calculator</h1>
+        <div class="contanier p-5 w-50 d-flex justify-content-center">
+            <input type="number" id="num11"/>
+            <input type="number" id="num22"/>
+        </div>
+        <div id="result" class="d-flex justify-content-center mx-auto">Result :</div>
+        <div class="contanier d-flex justify-content-evenly mt-3">
+            <button class="btn btn-primary" id="addition">addition</button>
+            <button class="btn btn-primary" id="subtract">subtract</button>
+            <button class="btn btn-primary" id="multiply">multiply</button>
+            <button class="btn btn-primary" id="divison">divison</button>
+        </div>
+        </div>
+
+
+        <div class="contanier mx-auto m-5" style=" background-color: rgb(74, 71, 71); height: 400px; width: 290px;">
+
+            <div class="container p-3">
+                <input type="number" id="num" style="font-size: 22px;"/>
+            </div>
+            <div class="container pt-3 d-flex justify-content-around">
+                <button type="button" class="btn btn-secondary px-4 ">(</button>
+                <button type="button" class="btn btn-secondary px-4">)</button>
+                <button type="button" class="btn btn-secondary px-4">C</button>
+                <button type="button" class="btn btn-secondary px-4" id="back" ><i class="fa-solid fa-delete-left"></i></button>
+            </div>
+
+            <div class="container pt-3 d-flex justify-content-around">
+                <button type="button" class="btn btn-light px-4" id="num7">7</button>
+                <button type="button" class="btn btn-light px-4" id="num8">8</button>
+                <button type="button" class="btn btn-light px-4" id="num9">9</button>
+                <button type="button" class="btn btn-secondary px-4" id="divs"><i class="fa-solid fa-divide"></i></button>
+            </div>
+
+            <div class="container pt-3 d-flex justify-content-around">
+                <button type="button" class="btn btn-light px-4" id="num4">4</button>
+                <button type="button" class="btn btn-light px-4" id="num5">5</button>
+                <button type="button" class="btn btn-light px-4" id="num6">6</button>
+                <button type="button" class="btn btn-secondary px-4" id="multi"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="container pt-3 d-flex justify-content-around">
+                <button type="button" class="btn btn-light px-4" id="num1">1</button>
+                <button type="button" class="btn btn-light px-4" id="num2">2</button>
+                <button type="button" class="btn btn-light px-4" id="num3">3</button>
+                <button type="button" class="btn btn-secondary px-4" id="sub"><i class="fa-solid fa-minus"></i></button>
+            </div>
+
+             <div class="container pt-3 d-flex justify-content-around">
+                <button type="button" class="btn btn-secondary px-4" id="num0">0</button>
+                <button type="button" class="btn btn-secondary px-4" id="dot">.</button>
+                <button type="button" class="btn btn-primary px-4" id="equal">=</button>
+                <button type="button" class="btn btn-secondary px-4" id="add"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+
+        <script src="./script.js" ></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    </body>
+</html>
