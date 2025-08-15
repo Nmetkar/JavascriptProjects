@@ -23,7 +23,9 @@ const resetBtn = () => {
     turnO = true;
     count = 0;
     enableBoxes();
-     msgContainer.classList.add("hide");
+    msgbox.classList.add("hide");
+     msgwinner.innerText = "";
+     
 }
 boxes.forEach((box) => {
     box.addEventListener("click", () => {

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Structure</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Exercise 1: Number Checker
+let num = parseInt(prompt("Enter a number:"));
+if (num > 0) {
+  console.log("The number is positive.");
+} else if (num < 0) {
+  console.log("The number is negative.");
+} else {
+  console.log("The number is zero.");
+}
+
+// Exercise 2: Multiplication Table
+let numbers = parseInt(prompt("Enter a number:"));
+for (let i = 1; i <= 10; i++) {
+  console.log(`${numbers} x ${i} = ${numbers * i}`);
+}
+
+// Exercise 3: Number Guessing Game
+let target = Math.floor(Math.random() * 10) + 1;
+let guess;
+while (guess !== target) {
+  guess = parseInt(prompt("Guess the number (1-10):"));
+  if (guess < target) {
+    console.log("Too low! Try again.");
+  } else if (guess > target) {
+    console.log("Too high! Try again.");
+  } else {
+    console.log("Correct! You guessed the number.");
+  }
+}
+
+// Exercise 4: Print Even Numbers
+for (let i = 2; i <= 20; i += 2) {
+  console.log(i);
+}
+
+// Exercise 5: Sum of Digits
+let digitNum = parseInt(prompt("Enter a number:"));
+let summ = 0;
+do {
+  summ += digitNum % 10;
+  digitNum = Math.floor(digitNum / 10);
+} while (digitNum > 0);
+console.log("Sum of digits:", summ);
+
+// Exercise 6: FizzBuzz Problem
+for (let i = 1; i <= 100; i++) {
+  if (i % 15 === 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 === 0) {
+    console.log("Fizz");
+  } else if (i % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
+}
+    // Exercise 7: Prime Number Checker
+    let numb = parseInt(prompt("Exercise 7: Enter a number to check if it's prime:"));
+    let isPrime = true;
+    if (numb <= 1) {
+      isPrime = false;
+    } else {
+      for (let i = 2; i <= Math.sqrt(numb); i++) {
+        if (numb % i === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+    }
+    console.log(isPrime ? `${numb} is a prime number.` : `${numb} is not a prime number.`);
+
+    // Exercise 8: Star Pattern
+    console.log("Exercise 8: Star Pattern");
+    for (let i = 1; i <= 5; i++) {
+      console.log("*".repeat(i));
+    }
+
+    // Exercise 9: Largest of Three Numbers
+    let a = parseInt(prompt("Exercise 9: Enter first number:"));
+    let b = parseInt(prompt("Enter second number:"));
+    let c = parseInt(prompt("Enter third number:"));
+    let largest = Math.max(a, b, c);
+    console.log(`The largest number is: ${largest}`);
+
+    // Exercise 10: Palindrome Checker
+    let str = prompt("Exercise 10: Enter a string to check for palindrome:");
+    let reversed = str.split("").reverse().join("");
+    console.log(str === reversed ? `${str} is a palindrome.` : `${str} is not a palindrome.`);
+
+    // Exercise 11: Count Vowels and Consonants
+    let input = prompt("Exercise 11: Enter a string to count vowels and consonants:").toLowerCase();
+    let vowels = "aeiou";
+    let vCount = 0, cCount = 0;
+    for (let char of input) {
+      if (/[a-z]/.test(char)) {
+        if (vowels.includes(char)) {
+          vCount++;
+        } else {
+          cCount++;
+        }
+      }
+    }
+    console.log(`Vowels: ${vCount}`);
+    console.log(`Consonants: ${cCount}`);
+
+    // Exercise 12: Reverse a Number
+    let number = parseInt(prompt("Exercise 12: Enter a number to reverse:"));
+    let reversedNum = 0;
+    while (number > 0) {
+      reversedNum = reversedNum * 10 + (number % 10);
+      number = Math.floor(number / 10);
+    }
+    console.log(`Reversed number: ${reversedNum}`);
+
+    // Exercise 13: Sum of Odd and Even Numbers
+    let evenSum = 0, oddSum = 0;
+    for (let i = 1; i <= 100; i++) {
+      if (i % 2 === 0) {
+        evenSum += i;
+      } else {
+        oddSum += i;
+      }
+    }
+    console.log(`Sum of even numbers: ${evenSum}`);
+    console.log(`Sum of odd numbers: ${oddSum}`);
+
+    // Exercise 14: Factorial Using a while Loop
+    let n = parseInt(prompt("Exercise 14: Enter a number to calculate factorial:"));
+    let factorial = 1;
+    while (n > 1) {
+      factorial *= n;
+      n--;
+    }
+    console.log(`Factorial is: ${factorial}`);
+
+    // Exercise 15: Average of N Numbers
+    let count = parseInt(prompt("Exercise 15: How many numbers?"));
+    let sum = 0;
+    for (let i = 1; i <= count; i++) {
+      let num = parseFloat(prompt(`Enter number ${i}:`));
+      sum += num;
+    }
+    let average = sum / count;
+    console.log(`Average: ${average}`);
+
+
+// Exercise 16: Leap Year Checker
+let year = parseInt(prompt("Exercise 17: Enter a year to check for leap year:"));
+if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+  console.log(`${year} is a leap year.`);
+} else {
+  console.log(`${year} is not a leap year.`);
+}
+
+// Exercise 17: Find Divisors of a Number
+let divisorNum = parseInt(prompt("Exercise 18: Enter a number to find its divisors:"));
+let divisors = [];
+for (let i = 1; i <= divisorNum; i++) {
+  if (divisorNum % i === 0) {
+    divisors.push(i);
+  }
+}
+console.log(`Divisors of ${divisorNum}: ${divisors.join(", ")}`);
+
+// Exercise 18: Fibonacci Sequence
+let terms = parseInt(prompt("Exercise 19: How many terms for Fibonacci sequence?"));
+let fib = [0, 1];
+for (let i = 2; i < terms; i++) {
+  fib[i] = fib[i - 1] + fib[i - 2];
+}
+console.log(`Fibonacci sequence: ${fib.slice(0, terms).join(", ")}`);
+
+// Exercise 19: Armstrong Number Checker
+let armNum = parseInt(prompt("Exercise 20: Enter a number to check for Armstrong number:"));
+let digits = armNum.toString().split("");
+let power = digits.length;
+let armSum = digits.reduce((acc, d) => acc + Math.pow(parseInt(d), power), 0);
+console.log(armSum === armNum ? `${armNum} is an Armstrong number.` : `${armNum} is not an Armstrong number.`);
+
+// Exercise 20: Number Pyramid
+console.log("Exercise 21: Number Pyramid");
+let pyramid = [
+  [1],
+  [1, 0, 1],
+  [1, 0, 1, 2, 1]
+];
+pyramid.forEach(row => console.log(row.join(" ")));
+
+</script>
+</html>

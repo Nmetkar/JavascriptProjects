@@ -24,22 +24,9 @@
         </style>
     </head>
     <body>
-       <!-- Assigment 1 -->
-        <div class="contanier mt-3 w-75 mx-auto" style="background-color: rgb(211, 249, 136);">
-            <h1 class="text-center">Assigment 1</h1>
-            <div class="container m-3">
-                <input type="text" id="taskName" class="form-control-2"/>
-                <button type="button" class="btn btn-outline-primary" onclick="addNewTask()" >Add Task</button>
-                <button type="button" class="btn btn-primary" onclick="clearAllTasks()">Clear All</button>
-                <ul id="showTasks"></ul>
-            </div>
-        </div>
-
-    <hr>
-
-
+       <!-- Tables -->
     <div class="contanier mt-2 p-3" style="background-color: rgb(113, 240, 240);">
-        <h1 class="text-center">Assigment 2</h1>
+        <h1 class="text-center">Tables</h1>
         <div class="contanier w-50 mx-auto">
 
             <table class="table">
@@ -62,49 +49,81 @@
         </div>
     </div>
 
+<hr>
+
+<!-- To Do List Manager -->
+  <div class="contanier mt-3 w-75 mx-auto" style="background-color: rgb(211, 249, 136);">
+            <h1 class="text-center">To Do List Manager</h1>
+            <div class="container m-3">
+                <input type="text" id="taskName" class="form-control-2"/>
+                <button type="button" class="btn btn-outline-primary" onclick="addNewTask()" >Add Task</button>
+                <button type="button" class="btn btn-primary" onclick="clearAllTasks()">Clear All</button>
+                <ul id="showTasks"></ul>
+            </div>
+        </div>
 
 <hr>
 
-<!-- Assigment 3 -->
-
-<div class="container mt-3 text-center pb-4" style="background-color: rgb(249, 144, 165);">
-    <h1>Students Marks Calculator</h1>
-    <div class="contanier pb-4 mt-4">
-        <input type="text" id="marksNum" class="form-control-2"/>
-        <button type="button" class="btn btn btn-success" onclick="addNewMarks()"> Add Marks</button>
-        <button type="button" class="btn btn btn-success" onclick="calculateNewMarks()"> Calculate Marks</button>
-        <button type="button" class="btn btn btn-success" onclick="resetNewMarks()"> Reset Marks</button>
+ <!-- Student Marks Calculator -->
+    <div class="container mb-5 p-4 border rounded shadow-sm" style="background-color: rgb(179, 136, 249);">
+        <h2 class="text-center">Student Marks Calculator</h2>
+        <div class="input-group mb-3">
+            <input type="number" id="markInput" class="form-control" placeholder="Enter a mark">
+            <button class="btn btn-primary" onclick="addMark()">Add Mark</button>
+            <button class="btn btn-success" onclick="calculateMarks()">Calculate</button>
+            <button class="btn btn-danger" onclick="resetMarks()">Reset</button>
+        </div>
+        <div id="marksResult" class="mt-3"></div>
     </div>
-    <div class="contanier" style="background-color: bisque; height: 200px;"></div>
-    <ul id="showMarks" class="fw-bold"></ul>
-</div>
 
 <hr>
 
-<!-- Assigment 4 -->
-
-
-<div class="contanier mt-3 w-50 mx-auto" style="background-color: rgb(228, 190, 254);">
-    <h1>Search in an Array</h1>
-    <div class="contanier m-3 ">
-        <input type="text" class="form-control-2" id="searchName"/>
-        <button type="button" class="btn btn btn-info" onclick="searchhere()">Search</button>
+    <!-- Search in an Array -->
+    <div class="container p-4 border rounded shadow-sm" style="background-color: rgb(243, 160, 204);">
+        <h2 class="text-center">Search in an Array</h2>
+        <div class="input-group mb-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Enter value to search">
+            <button class="btn btn-primary" onclick="searchArray()">Search</button>
+        </div>
+        <div id="searchResult" class="mt-3"></div>
     </div>
-</div>
 
+<hr>
 
+    <!-- Filter Even and Odd Numbers -->
+    <div class="container mb-5 p-4 border rounded shadow-sm" style="background-color: rgb(247, 191, 165);">
+        <h2 class="text-center">Filter Even and Odd Numbers</h2>
+        <div class="input-group mb-3">
+            <input type="number" id="numberInput" class="form-control" placeholder="Enter a number">
+            <button class="btn btn-primary" onclick="addNumber()">Add Number</button>
+            <button class="btn btn-success" onclick="showEven()">Show Even</button>
+            <button class="btn btn-warning" onclick="showOdd()">Show Odd</button>
+            <button class="btn btn-danger" onclick="clearNumbers()">Clear</button>
+        </div>
 
+        <div class="mb-3">
+            <label class="form-label fw-bold">Even Numbers</label>
+            <input type="text" id="evenNumbers" class="form-control" readonly>
+        </div>
+        <div>
+            <label class="form-label fw-bold">Odd Numbers</label>
+            <input type="text" id="oddNumbers" class="form-control" readonly>
+        </div>
+    </div>
 
+<hr>
 
-
-
-
-
-
-
-
-
-
+    <!-- Sort Names Alphabetically -->
+    <div class="container p-4 border rounded shadow-sm" style="background-color: rgb(232, 249, 136);">
+        <h2 class="text-center">Sort Names Alphabetically</h2>
+        <div class="input-group mb-3">
+            <input type="text" id="nameInput" class="form-control" placeholder="Enter a name">
+            <button class="btn btn-primary" onclick="addName()">Add Name</button>
+            <button class="btn btn-success" onclick="sortNames()">Sort</button>
+            <button class="btn btn-danger" onclick="resetNames()">Reset</button>
+        </div>
+        <div id="nameList" class="mt-2"></div>
+    </div>
 
 
 

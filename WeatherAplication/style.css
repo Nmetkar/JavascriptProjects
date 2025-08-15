@@ -1,21 +1,49 @@
-body{
-    background-image: url(./weather.jpg);
-    background-size: cover;
+body {
+    background: url('weather.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.weathercon{
-    background: rgb(47, 163, 163);
-    opacity: 10px;
-    border-radius: 20px ;
-    height: 450px;
+.weather-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 20px;
+    border-radius: 15px;
     width: 380px;
-    margin-top: 80px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
 
-.icon{
-    border: none;
-    height: 45px;
-    width: 45px;
+.search-box {
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
+    overflow: hidden;
+}
+
+.search-btn {
+    border: none;
+    background: #0d6efd;
+    color: white;
+    padding: 0 15px;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #0b5ed7;
+}
+
+.extra-info {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.extra-info div {
+    margin: 5px 0;
 }
